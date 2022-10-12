@@ -28,11 +28,16 @@ def checkNumber():
     # Display "Number {Number} is odd" if given number is odd on result.html page
     # Display "No number provided" if value is null or blank on result.html page
     # Display "Provided input is not an integer!" if value is not a number on result.html page
+
     global number
     number = request.form['number']
 
     # Write your to code here to check whether number is even or odd and render result.html page
-
+    number = int(number)
+    if (number % 2) == 0:
+        print ("Even")
+    else:
+        print ("Odd")
 
 @app.get('/addStudentOrganisation')
 def displayStudentForm():
