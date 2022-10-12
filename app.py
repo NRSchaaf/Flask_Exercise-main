@@ -35,9 +35,9 @@ def checkNumber():
     # Write your to code here to check whether number is even or odd and render result.html page
     number = int(number)
     if (number % 2) == 0:
-        print ("Even")
+        return render_template('index.html',number="Even")
     else:
-        print ("Odd")
+        return render_template('index.html',number="Odd")
 
 @app.get('/addStudentOrganisation')
 def displayStudentForm():
