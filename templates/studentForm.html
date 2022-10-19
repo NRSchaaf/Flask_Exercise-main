@@ -1,6 +1,38 @@
 {% block content %}
-<h1>Register</h1>
-<h4>Enter Student Information below</h4>
-<!--Form to request user's name-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Register</h1>
+    <h4>Enter Student Information below</h4>
+
+    <!--Form to request user's name-->
+    <form action="/addStudentOrganisation" method="POST">
+        <div class="form-group">
+          <label for="Enter Name:">Enter a string</label>
+          <input type="string" name="name" id="name">
+          <label for="Enter Organization:">Enter a string</label>
+          <select name="org" id="org">
+            <option value="">--Please choose an option--</option>
+            <option value="UNCC">UNCC</option>
+            <option value="Carney">Carney</option>
+            <option value="Kansas">Kansas</option>
+            <option value="UNC">UNC</option>
+            <option value="ECU">ECU</option>
+            <option value="Harbor View">Harbor View</option>
+        </select>
+        </div>
+        <button type="submit" value="Submit" class="btn btn-primary">Submit</button>
+    </form>
+    
+</body>
+</html>
+
+
 
 {% endblock %}
